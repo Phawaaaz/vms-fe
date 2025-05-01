@@ -23,10 +23,19 @@ export default function VisitorLayout() {
             onClick={() => setSidebarOpen(true)}
             className="lg:hidden text-gray-700 hover:text-gray-900"
           >
-            <AlignJustify className="h-6 w-6" />
+            <AlignJustify className="size-5" />
           </button>
 
           <div className="text-lg font-bold text-gray-800">Visitor Portal</div>
+
+          <div className="w-8 h-8 flex items-center justify-center rounded-full font-medium bg-gray-300">
+            {/* <img
+            src="/fawaz.jpg"
+            alt="User"
+            className="h-10 w-10 rounded-full object-cover"
+          /> */}
+            <span className="text-sm">AF</span>
+          </div>
         </header>
 
         {/* Page Content */}

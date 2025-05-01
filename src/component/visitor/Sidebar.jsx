@@ -33,7 +33,7 @@ export default function VisitorSidebar({ sidebarOpen, onClose }) {
         {/* Mobile close button */}
         <div className="flex justify-end p-4 lg:hidden">
           <button onClick={onClose}>
-            <X className="h-6 w-6 text-gray-500" />
+            <X className="size-5 text-gray-500" />
           </button>
         </div>
 
@@ -57,7 +57,7 @@ export default function VisitorSidebar({ sidebarOpen, onClose }) {
                     : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                 )}
               >
-                <item.icon className="h-6 w-6" />
+                <item.icon className="size-5" />
                 <span>{item.name}</span>
               </Link>
             );
@@ -65,17 +65,35 @@ export default function VisitorSidebar({ sidebarOpen, onClose }) {
         </nav>
 
         {/* Logout Button */}
-        <div className="p-4 border-t">
+        <div className="p-3">
           <button
-            className="w-full flex items-center gap-4 rounded-lg px-4 py-3 text-base font-semibold text-red-600 hover:bg-red-50"
+            className="w-full flex items-center gap-4 rounded-lg px-4 py-3 text-base font-semibold text-red-600 hover:bg-red-50 cursor-pointer"
             onClick={() => {
               // Add logout logic
               console.log("Logging out...");
             }}
           >
-            <LogOut className="h-6 w-6" />
+            <LogOut className="size-5" />
             Logout
           </button>
+        </div>
+
+        {/* User Info */}
+        <div className="flex items-center gap-4 p-4 border-t">
+          {/* Profile Picture */}
+          <div className="w-8 h-8 flex items-center justify-center rounded-full font-medium bg-gray-300">
+            {/* <img
+            src="/fawaz.jpg"
+            alt="User"
+            className="h-10 w-10 rounded-full object-cover"
+          /> */}
+            <span className="text-sm">AF</span>
+          </div>
+
+          <div>
+            <div className="text-sm font-bold text-gray-800">Akinola Fawaz</div>
+            <div className="text-xs text-gray-500">Administrator</div>
+          </div>
         </div>
       </div>
     </>
