@@ -14,6 +14,8 @@ import VisitorLayout from "../layout/visitor/layout";
 import Settings from "../pages/admin/Settings";
 import Reports from "../pages/admin/Reports";
 import NotFoundPage from "../pages/NotFoundPage";
+import { Booking } from "../pages/visitors/Booking";
+import { Profile } from "../pages/visitors/Profile";
 
 const router = createBrowserRouter([
   {
@@ -40,9 +42,9 @@ const router = createBrowserRouter([
         element: <VisitorLayout />,
         children: [
           { path: "dashboard", element: <VisitorDashboard /> },
-          // { path: "book-visit", element: <BookVisit /> },
-          // { path: "visit/:id", element: <VisitDetails /> },
-          // { path: "history", element: <VisitHistory /> },
+          { path: "book-visit", element: <Booking /> },
+          { path: "visit/:id", element: <Profile /> },
+          { path: "history", element: <history /> },
         ],
       },
 
