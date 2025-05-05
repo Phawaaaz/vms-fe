@@ -19,7 +19,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#register"
+                href="/auth/register"
                 className="bg-blue-400 bg-blue-400 hover:bg-primary-600 text-white font-medium py-3 px-8 rounded-xl transition-standard shadow-md hover:shadow-lg flex items-center justify-center hover:-translate-y-1"
               >
                 Register Now

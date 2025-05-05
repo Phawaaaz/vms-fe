@@ -59,13 +59,13 @@ const Header = () => {
               Contact
             </a>
             <a
-              href="#login"
+              href="/auth/login"
               className="text-gray-700 hover:text-primary-500 transition-standard font-medium"
             >
               Login
             </a>
             <a
-              href="#try-now"
+              href="/auth/register"
               className="bg-primary-500 text-white rounded-xl px-5 py-2.5 hover:bg-primary-600 transition-standard bg-blue-400"
             >
               Try Now
@@ -135,14 +135,14 @@ const Header = () => {
               Contact
             </a>
             <a
-              href="#login"
+              href="/auth/login"
               className="block text-gray-700 hover:text-blue-400 transition-standard font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Login
             </a>
             <a
-              href="#try-now"
+              href="/auth/register"
               className="block bg-blue-400 text-white rounded-xl px-5 py-2.5 text-center hover:bg-primary-600 transition-standard w-full"
               onClick={() => setIsMobileMenuOpen(false)}
             >
