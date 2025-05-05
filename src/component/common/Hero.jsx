@@ -1,38 +1,79 @@
 import React from "react";
-import { useNavigate } from "react-router";
 
 const Hero = () => {
-  const navigate = useNavigate();
   return (
-    <>
-      <section className="bg-gray-400 min-h-[80vh] flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-20 text-foreground">
-        <div className="max-w-xl">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
-            Smarter Visitor Management
-          </h1>
-          <p className="text-lg text-white mt-4">
-            Modernize your front desk with instant check-ins, real-time alerts,
-            and secure visitor tracking. One platform for all your needs.
-          </p>
-          <div className="mt-6">
-            <button
-              onClick={() => navigate("/auth/register")}
-              className="px-6 py-2 rounded-lg bg-sky-300 hover:bg-sky-500 text-sm"
-            >
-              Get Started
-            </button>
+    <section className="pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden ">
+      <div className="container mx-auto px-6 md:px-6 lg:px-8  md:py-42">
+        <div className="flex flex-col lg:flex-row items-center align-middle">
+          <div className="w-full  lg:w-1/2 mb-12 lg:mb-0 fade-in-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+              Smart Visitor Access.
+              <span className="text-blue-400 text-blue-400">
+                {" "}
+                Simplified.
+              </span>
+            </h1>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-lg">
+              Say goodbye to paper logs. Greet your guests with a modern
+              check-in system powered by QR codes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#register"
+                className="bg-blue-400 bg-blue-400 hover:bg-primary-600 text-white font-medium py-3 px-8 rounded-xl transition-standard shadow-md hover:shadow-lg flex items-center justify-center hover:-translate-y-1"
+              >
+                Register Now
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-2 bg-blue-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#demo"
+                className="bg-transparent hover:bg-gray-100 text-gray-800 font-medium py-3 px-8 rounded-xl border border-gray-300 transition-standard hover:-translate-y-1 flex items-center justify-center"
+              >
+                Watch Demo
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-2"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div
+            className="w-full lg:w-1/2 flex justify-center lg:justify-end fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div className="relative w-full max-w-lg">
+              <div className="absolute top-0 -left-4 w-72 h-72 bg-primary-300 rounded-full opacity-30 mix-blend-multiply filter blur-xl animate-blob"></div>
+              <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full opacity-30 mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+              <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-400 rounded-full opacity-20 mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+              <img
+                src="https://images.pexels.com/photos/6476260/pexels-photo-6476260.jpeg"
+                alt="Person scanning QR code at a smart terminal"
+                className="relative rounded-2xl shadow-xl transform hover:scale-105 transition-all duration-500 ease-in-out w-full object-cover"
+              />
+            </div>
           </div>
         </div>
-
-        <div className="md:flex mt-10 md:mt-0 md:ml-12">
-          <img
-            src="https://imgs.search.brave.com/0eu3CoQ011pEkIb4Rt0c_1xOCpCpunWIoI8hWD_ilJM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmFjaWxpdHlvcy5j/b20vaHMtZnMvaHVi/ZnMvRmFjaWxpdHlP/UyUyMDIwMjUvSW1h/Z2UvaW1hZ2UtMy5w/bmc_d2lkdGg9NTUy/JmhlaWdodD02Mzkm/bmFtZT1pbWFnZS0z/LnBuZw"
-            alt="Visitor dashboard preview"
-            className="max-w-md transform transition-all duration-500 md:hover:scale-141"
-          />
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
