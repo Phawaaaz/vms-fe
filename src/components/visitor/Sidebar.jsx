@@ -12,7 +12,7 @@ import {
 
 const visitor_navigation = [
   { name: "Dashboard", href: "/visitor/dashboard", icon: HomeIcon },
-  { name: "My Visits", href: "/visitor/visits", icon: Calendar },
+  { name: "My Visits", href: "/visitor/my-visits", icon: Calendar },
   { name: "Profile", href: "/visitor/profile", icon: User },
   { name: "QR Code", href: "/visitor/qrcode", icon: QrCode },
   { name: "Support", href: "/visitor/support", icon: LifeBuoy },
