@@ -114,7 +114,7 @@ const ScheduleVisitModal = ({ isOpen, onClose, onSchedule }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity">
+    <div className="fixed inset-0 z-50 flex items-center justify-center  backdrop-blur-xl bg-opacity-50 transition-opacity">
       <div
         ref={modalRef}
         className="bg-white rounded-lg shadow-xl w-full max-w-md p-6 relative"
