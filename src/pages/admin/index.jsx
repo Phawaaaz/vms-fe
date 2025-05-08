@@ -7,7 +7,6 @@ import {
   Calendar,
   TrendingUp,
 } from "lucide-react";
-
 import {
   Select,
   SelectContent,
