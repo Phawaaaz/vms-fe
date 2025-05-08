@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../../component/common/Card";
+import Card from "../../components/common/Card";
 import {
   BarChart3,
   Users,
@@ -7,6 +7,14 @@ import {
   Calendar,
   TrendingUp,
 } from "lucide-react";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../../components/ui/select";
 
 const StatCard = ({ title, value, icon, color }) => (
   <div className="bg-white rounded-xl shadow p-4">
@@ -26,13 +34,19 @@ const AdminDashboard = () => {
       <div className="flex items-center justify-between mb-2">
         <h1 className="text-2xl font-bold">Dashboard</h1>
 
-        <div>
-          <select className="border rounded-lg p-2 text-sm">
-            <option>Last 7 days</option>
-            <option>Last 30 days</option>
-            <option>This Year</option>
-          </select>
-        </div>
+        <Select>
+          <SelectTrigger className="w-[180px] bg-white cursor-pointer">
+            <SelectValue placeholder="Filter" />
+          </SelectTrigger>
+
+          <SelectContent>
+            <SelectItem defaultChecked value="7_days">
+              Last 7 days
+            </SelectItem>
+            <SelectItem value="30_days">Last 30 days</SelectItem>
+            <SelectItem value="this_year">This Year</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <Card>

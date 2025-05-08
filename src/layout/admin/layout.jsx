@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Sidebar from "../../component/admin/Sidebar";
-import Navbar from "../../component/admin/Navbar";
+import Sidebar from "../../components/admin/Sidebar";
+import Navbar from "../../components/admin/Navbar";
 import { Outlet } from "react-router";
 
 export default function AdminLayout() {

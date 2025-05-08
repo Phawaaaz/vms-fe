@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router";
-
 import { AlignJustify } from "lucide-react";
-import VisitorSidebar from "../../component/visitor/Sidebar";
+import VisitorSidebar from "../../components/visitor/Sidebar";
 
 export default function VisitorLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
