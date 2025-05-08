@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Sidebar from "../../component/admin/Sidebar";
-import TopNav from "../../component/admin/TopNav";
+import Navbar from "../../component/admin/Navbar";
 import { Outlet } from "react-router";
 
 export default function AdminLayout() {
@@ -16,7 +16,8 @@ export default function AdminLayout() {
 
       {/* Main Content */}
       <div className="flex flex-1 flex-col overflow-hidden">
-        <TopNav onMenuClick={() => setSidebarOpen(true)} />
+        <Navbar onMenuClick={() => setSidebarOpen(true)} />
+
         <main className="flex-1 overflow-y-auto p-4">
           <Outlet />
         </main>

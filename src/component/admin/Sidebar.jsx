@@ -1,12 +1,22 @@
 import { Link, useLocation } from "react-router";
-import { Home, Users, Clipboard, CogIcon, X, LogOut } from "lucide-react";
 import { cn } from "../../lib/utils";
 
-const navigation = [
-  { name: "Dashboard", href: "/admin/dashboard", icon: Home },
+import {
+  LayoutDashboard,
+  Users,
+  Building2,
+  BarChart3,
+  Settings as SettingsIcon,
+  X,
+  LogOut,
+} from "lucide-react";
+
+const admin_navigation = [
+  { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
   { name: "Visitors", href: "/admin/visitors", icon: Users },
-  { name: "Reports", href: "/admin/reports", icon: Clipboard },
-  { name: "Settings", href: "/admin/settings", icon: CogIcon },
+  { name: "Departments", href: "/admin/departments", icon: Building2 },
+  { name: "Reports", href: "/admin/reports", icon: BarChart3 },
+  { name: "Settings", href: "/admin/settings", icon: SettingsIcon },
 ];
 
 export default function Sidebar({ sidebarOpen, onClose }) {
@@ -30,31 +40,31 @@ export default function Sidebar({ sidebarOpen, onClose }) {
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        {/* Mobile close button */}
-        <div className="flex justify-end p-4 lg:hidden">
-          <button onClick={onClose}>
-            <X className="size-5 text-gray-500" />
-          </button>
-        </div>
+        <div className="flex items-center justify-between p-4 border-b">
+          <h1 className="text-xl font-bold text-[#3c73b6]">Admin Portal</h1>
 
-        {/* Logo */}
-        <div className="flex items-center justify-center p-4">
-          <span className="text-2xl font-bold text-gray-800">VMS</span>
+          <button
+            onClick={onClose}
+            className="p-1 rounded-lg hover:bg-gray-100 lg:hidden cursor-pointer"
+          >
+            <X size={24} />
+          </button>
         </div>
 
         {/* Nav Links */}
         <nav className="flex-1 px-3 py-6 space-y-2 overflow-y-auto">
-          {navigation.map((item) => {
+          {admin_navigation.map((item) => {
             const isActive = location.pathname.startsWith(item.href);
             return (
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={onClose}
                 className={cn(
-                  "flex items-center gap-4 rounded-lg px-4 py-3 text-base font-semibold transition-all",
+                  "flex items-center gap-4 rounded-lg px-4 py-3 font-semibold transition-all duration-300",
                   isActive
-                    ? "bg-primary text-white shadow-sm"
-                    : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    ? "bg-blue-400/10 text-[#3c73b6]"
+                    : "hover:bg-gray-100 text-gray-700"
                 )}
               >
                 <item.icon className="size-5" />
@@ -82,11 +92,6 @@ export default function Sidebar({ sidebarOpen, onClose }) {
         <div className="flex items-center gap-4 p-4 border-t">
           {/* Profile Picture */}
           <div className="w-8 h-8 flex items-center justify-center rounded-full font-medium bg-gray-300">
-            {/* <img
-            src="/fawaz.jpg"
-            alt="User"
-            className="h-10 w-10 rounded-full object-cover"
-          /> */}
             <span className="text-sm">AF</span>
           </div>
 
