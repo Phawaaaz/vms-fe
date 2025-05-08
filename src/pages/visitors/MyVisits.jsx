@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Table from "../../components/common/Table";
 import Card from "../../components/common/Card";
 import { CalendarClock, Filter } from "lucide-react";
+import ScheduleVisitModal from "./ScheduleVisitModal";
 
 const mockVisits = [
   {
@@ -56,6 +57,15 @@ const mockVisits = [
 
 const MyVisits = () => {
   const [activeTab, setActiveTab] = useState("all");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const columns = [
     { header: "Department", accessorKey: "department" },
@@ -85,7 +95,10 @@ const MyVisits = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">My Visits</h1>
-        <button className="flex items-center px-4 py-2 bg-[#3c73b6] text-white rounded-lg hover:bg-[#3c73b6]/90 transition-colors">
+        <button
+          className="flex items-center px-4 py-2 bg-[#3c73b6] text-white rounded-lg hover:bg-[#3c73b6]/90 transition-colors"
+          onClick={openModal}
+        >
           <CalendarClock size={18} className="mr-2" />
           Schedule Visit
         </button>
@@ -159,6 +172,8 @@ const MyVisits = () => {
           </div>
         </div>
       </Card>
+
+      <ScheduleVisitModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
