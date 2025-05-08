@@ -4,7 +4,7 @@ import Homepage from "../pages/home/index";
 import LoginPage from "../pages/auth/login";
 import RegisterPage from "../pages/auth/register";
 import AdminDashboard from "../pages/admin/index";
-import VisitorLists from "../pages/admin/VisitorLists";
+import Visitors from "../pages/admin/Visitors";
 import VisitorDashboard from "../pages/visitors";
 
 // layouts
@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         element: <AdminLayout />,
         children: [
           { path: "dashboard", element: <AdminDashboard /> },
-          { path: "visitors", element: <VisitorLists /> },
+          { path: "visitors", element: <Visitors /> },
           // { path: "visitor/:id", element: <VisitorDetail /> },
           { path: "departments", element: <Departments /> },
           { path: "reports", element: <Reports /> },
