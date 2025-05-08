@@ -92,11 +92,11 @@ export default function Sidebar({ sidebarOpen, onClose }) {
         <div className="flex items-center gap-4 p-4 border-t">
           {/* Profile Picture */}
           <div className="w-8 h-8 flex items-center justify-center rounded-full font-medium bg-gray-300">
-            <span className="text-sm">AF</span>
+            <span className="text-sm">JD</span>
           </div>
 
           <div>
-            <div className="text-sm font-bold text-gray-800">Akinola Fawaz</div>
+            <div className="text-sm font-bold text-gray-800">John Doe</div>
             <div className="text-xs text-gray-500">Administrator</div>
           </div>
         </div>
