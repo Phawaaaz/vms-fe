@@ -7,7 +7,7 @@ export default function VisitorLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-gray-100">
       {/* Sidebar */}
       <VisitorSidebar
         sidebarOpen={sidebarOpen}

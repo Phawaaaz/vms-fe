@@ -39,9 +39,7 @@ const AdminDashboard = () => {
           </SelectTrigger>
 
           <SelectContent>
-            <SelectItem defaultChecked value="7_days">
-              Last 7 days
-            </SelectItem>
+            <SelectItem value="7_days">Last 7 days</SelectItem>
             <SelectItem value="30_days">Last 30 days</SelectItem>
             <SelectItem value="this_year">This Year</SelectItem>
           </SelectContent>

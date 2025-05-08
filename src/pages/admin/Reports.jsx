@@ -36,9 +36,7 @@ const Reports = () => {
               </SelectTrigger>
 
               <SelectContent>
-                <SelectItem defaultChecked value="this_week">
-                  This Week
-                </SelectItem>
+                <SelectItem value="this_week">This Week</SelectItem>
                 <SelectItem value="this_month">This Month</SelectItem>
                 <SelectItem value="this_quarter">This Quarter</SelectItem>
                 <SelectItem value="this_year">This Year</SelectItem>

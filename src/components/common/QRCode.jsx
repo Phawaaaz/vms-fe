@@ -19,7 +19,7 @@ const QRCode = ({ data, size = 100 }) => {
           <div className="absolute -top-2 -right-2 flex space-x-1">
             <button
               onClick={() => setModalOpen(true)}
-              className="bg-white shadow-md rounded-full p-1 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+              className="bg-white shadow-md rounded-full p-1 text-gray-600 hover:bg-gray-100 transition-all duration-300 cursor-pointer"
             >
               <Maximize2 size={14} />
             </button>
@@ -32,7 +32,7 @@ const QRCode = ({ data, size = 100 }) => {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="bg-white shadow-md rounded-full p-1 text-gray-600 hover:bg-gray-100 transition-all duration-300"
+              className="bg-white shadow-md rounded-full p-1 text-gray-600 hover:bg-gray-100 transition-all duration-300 cursor-pointer"
             >
               <Download size={14} />
             </button>

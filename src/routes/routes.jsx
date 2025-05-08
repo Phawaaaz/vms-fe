@@ -14,7 +14,7 @@ import VisitorLayout from "../layout/visitor/layout";
 import Settings from "../pages/admin/Settings";
 import Reports from "../pages/admin/Reports";
 import NotFoundPage from "../pages/NotFoundPage";
-import Visits from "../pages/visitors/Visits";
+import MyVisits from "../pages/visitors/MyVisits";
 import Profile from "../pages/visitors/Profile";
 import Departments from "../pages/admin/Departments";
 import Support from "../pages/visitors/Support";
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
         element: <VisitorLayout />,
         children: [
           { path: "dashboard", element: <VisitorDashboard /> },
-          { path: "my-visits", element: <Visits /> },
+          { path: "my-visits", element: <MyVisits /> },
           { path: "profile", element: <Profile /> },
           { path: "qrcode", element: <QrCode /> },
           { path: "support", element: <Support /> },
