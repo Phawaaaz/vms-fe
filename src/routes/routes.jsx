@@ -8,7 +8,7 @@ import VisitorLists from "../pages/admin/VisitorLists";
 import VisitorDashboard from "../pages/visitors";
 
 // layouts
-import AdminLayout from "../layout/admin/Layout";
+import AdminLayout from "../layout/admin/layout";
 import AuthLayout from "../layout/auth/layout";
 import VisitorLayout from "../layout/visitor/layout";
 import Settings from "../pages/admin/Settings";
@@ -16,6 +16,7 @@ import Reports from "../pages/admin/Reports";
 import NotFoundPage from "../pages/NotFoundPage";
 import { Booking } from "../pages/visitors/Booking";
 import { Profile } from "../pages/visitors/Profile";
+import Departments from "../pages/admin/Departments";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
           { path: "dashboard", element: <AdminDashboard /> },
           { path: "visitors", element: <VisitorLists /> },
           // { path: "visitor/:id", element: <VisitorDetail /> },
+          { path: "departments", element: <Departments /> },
           { path: "reports", element: <Reports /> },
           { path: "settings", element: <Settings /> },
         ],
